@@ -3,7 +3,7 @@ package com.github.denisarruda.turista.ai;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import dev.langchain4j.data.document.Document;
 import dev.langchain4j.data.document.loader.FileSystemDocumentLoader;
@@ -16,13 +16,17 @@ import dev.langchain4j.service.AiServices;
 import dev.langchain4j.store.embedding.EmbeddingStoreIngestor;
 import dev.langchain4j.store.embedding.inmemory.InMemoryEmbeddingStore;
 
-@Service
-public class RAGConfiguration {
+@Component
+public class ChatModelBuilder {
 
 	@Value("${OPENAI_API_KEY}")
 	private String apiKey;
 
-	public Assistant configure() throws Exception {
+	public SentimentAnalyzer buildSentimentAnalyzer() {
+		return AiServices.builder(SentimentAnalyzer.class).chatLanguageModel(OpenAiChatModel.withApiKey(apiKey)).build();
+	}
+	
+	public Assistant buildAssistant() {
 		// começamos recuperando os documentos da pasta
 		List<Document> docs = FileSystemDocumentLoader.loadDocuments(DocUtil.toPath("documents/"),
 				DocUtil.glob("*.txt"));
@@ -33,7 +37,7 @@ public class RAGConfiguration {
 		return assistant;
 	}
 
-	public static ContentRetriever createContentRetriever(List<Document> documents) {
+	private ContentRetriever createContentRetriever(List<Document> documents) {
 		// Paso 1 Aqui criamos uma estrutura em memoria
 		// para armazenar os Embeddings
 		InMemoryEmbeddingStore<TextSegment> embeddingStore = new InMemoryEmbeddingStore<>();

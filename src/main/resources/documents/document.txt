@@ -1,48 +1,36 @@
 {
-	"content": "As camas com lençóis super limpos e confortáveis, chuveiro quentinho, banheiro limpo. Ótimo atendimento desde a chegada até a saída. A recepcionista foi uma gracinha e as meninas da cozinha então, super educadas e prestativas!",
-	"type": "praise"
+	"content": "The beds with super clean and comfortable sheets, warm shower, clean bathroom. Great service from arrival to departure. The receptionist was cute and the girls in the kitchen were super polite and helpful!"
 },
 {
-	"content": "O jantar poderia ser um pouco melhor",
-	"type": "complaint"
+	"content": "Dinner could be a little better"
 },
 {
-	"content":"Simples mas tudo perfeito. Cama confortável. Ducha quente e abundante. Café da manhã sem luxo, mas delicioso. Tudo feito com muito capricho",
-	"type": "praise"
+	"content":"Simple but everything perfect. Comfortable bed. Hot and abundant shower. Breakfast without luxury, but delicious. Everything done with great care"
 },
 {
-	"content":"O banheiro é excelente, de bom tamanho, principalmente para dar banho em criança, mas o piso era muito escorregadio.",
-	"type": "praise"
+	"content":"The bathroom is excellent, a good size, especially for bathing children, but the floor was very slippery."
 },
 {
-	"content":"Hotel no geral é ótimo!",
-	"type": "praise"
+	"content":"Hotel in general is great!"
 },
 {
-	"content":"Variedade de atividades para todas as idades.Ótima comida, bem variada e com muitas opções.",
-	"type": "praise"
+	"content":"Variety of activities for all ages. Great food, very varied and with lots of options."
 },
 {
-	"content":"O horário de abertura das piscinas podiam ser mais cedo. às 10:00 é tarde. 9:00 seria uma boa hora.",
-	"type": "complaint"
+	"content":"Pool opening times could be earlier. 10:00 is late. 9:00 would be a good time."
 },
 {
-	"content":"quarto um pouco longe da área social",
-	"type": "complaint"
+	"content":"room a little far from the social area"
 },
 {
-	"content":"Havia entendido quando fiz a reserva que poderia dividir o valor em ate 10 vezes, o que não me foi permitido,",
-	"type": "complaint"
+	"content":"I understood when I made the reservation that I could split the amount up to 10 times, which I was not allowed to do,"
 },
 {
-	"content":"Lugar maravilhoso e o pessoal que trabalha são muito atenciosos. Amamos!",
-	"type": "praise"
+	"content":"Wonderful place and the people who work there are very attentive. We loved it!"
 },
 {
-	"content":"Excelente hotel para a família. Pessoal atencioso.",
-	"type": "praise"
+	"content":"Excellent hotel for the family. Attentive staff."
 },
 {
-	"content":"A acústica entre os quartos é péssima. Se escuta tudo de um quarto para o outro.",
-	"type": "complaint"
+	"content":"The acoustics between the rooms are terrible. You can hear everything from one room to the other."
 }
