@@ -25,7 +25,11 @@ public class ChatModelBuilder {
 	public SentimentAnalyzer buildSentimentAnalyzer() {
 		return AiServices.builder(SentimentAnalyzer.class).chatLanguageModel(OpenAiChatModel.withApiKey(apiKey)).build();
 	}
-	
+
+	public ChatWithFunction buildChat() {
+		return new ChatWithFunction(OpenAiChatModel.builder().apiKey(apiKey).build());
+	}
+
 	public Assistant buildAssistant() {
 		// começamos recuperando os documentos da pasta
 		List<Document> docs = FileSystemDocumentLoader.loadDocuments(DocUtil.toPath("documents/"),

@@ -31,4 +31,9 @@ public class TuristaController {
 	public Sentiment analyzeSentiment(@RequestBody String content) {
 		return turistaService.analyzeSentiment(content);
 	}
+	
+	@PostMapping("/chat")
+	public String chat(@RequestBody String content) {
+		return turistaService.chat(content);
+	}
 }

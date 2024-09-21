@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.github.denisarruda.turista.ai.Assistant;
 import com.github.denisarruda.turista.ai.ChatModelBuilder;
+import com.github.denisarruda.turista.ai.ChatWithFunction;
 import com.github.denisarruda.turista.ai.SentimentAnalyzer;
 import com.github.denisarruda.turista.ai.SentimentAnalyzer.Sentiment;
 
@@ -28,8 +29,13 @@ public class TuristaService {
 
 	}
 
-	public Sentiment analyzeSentiment(@RequestBody String content) {
+	public Sentiment analyzeSentiment(String content) {
 		SentimentAnalyzer sentimentAnalyzer = chatModel.buildSentimentAnalyzer();
 		return sentimentAnalyzer.analyzeSentimentOf(content);
+	}
+
+	public String chat(String request) {
+		ChatWithFunction sentimentAnalyzer = chatModel.buildChat();
+		return sentimentAnalyzer.generate(request);
 	}
 }
