@@ -3,6 +3,7 @@ package com.github.denisarruda.turista.controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.github.denisarruda.turista.ai.SentimentAnalyzer.Sentiment;
@@ -17,13 +18,13 @@ public class TuristaController {
 	}
 	
 	@GetMapping("/compliments")
-	public String praises() {
-		return turistaService.getMainCompliments();
+	public String praises(@RequestParam(required = true, defaultValue = "5") int size) {
+		return turistaService.getMainCompliments(size);
 	}
 
 	@GetMapping("/complaints")
-	public String complaint() {
-		return turistaService.getMainComplaints();
+	public String complaint(@RequestParam(required = true, defaultValue = "5") int size) {
+		return turistaService.getMainComplaints(size);
 	}
 
 	@PostMapping("/post")

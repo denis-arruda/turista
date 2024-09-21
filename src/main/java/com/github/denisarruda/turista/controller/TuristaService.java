@@ -17,14 +17,14 @@ public class TuristaService {
 		this.chatModel = chatModel;
 	}
 
-	public String getMainCompliments() {
+	public String getMainCompliments(int size) {
 		Assistant assistant = chatModel.buildAssistant();
-		return assistant.retrieveMainCompliments();
+		return assistant.retrieveMainCompliments(size);
 	}
 
-	public String getMainComplaints() {
+	public String getMainComplaints(int size) {
 		Assistant assistant = chatModel.buildAssistant();
-		return assistant.retrieveMainComplaints();
+		return assistant.retrieveMainComplaints(size);
 
 	}
 
