@@ -10,7 +10,4 @@ public interface SentimentAnalyzer {
 
 	@UserMessage("Analyze sentiment of {{it}}")
 	Sentiment analyzeSentimentOf(String text);
-	
-	@UserMessage("Does {{it}} is a question?")
-    boolean isQuestion(String text);
 }
