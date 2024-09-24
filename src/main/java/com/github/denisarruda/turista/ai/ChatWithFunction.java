@@ -61,8 +61,7 @@ public class ChatWithFunction {
 
 		@Tool("Returns the weather forecast")
 		String getWeather() {
-			int temperature = ThreadLocalRandom.current().nextInt(20, 44 + 1);
-			return "The weather is sunny and " + temperature + "°C";
+			return "The weather is sunny and 26°C";
 		}
 	}
 }
