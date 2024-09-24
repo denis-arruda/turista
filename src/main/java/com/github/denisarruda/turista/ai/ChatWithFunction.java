@@ -45,10 +45,10 @@ public class ChatWithFunction {
 
         // STEP 3: User execute function to obtain tool results
         if (toolExecutionRequests != null) {
-            toolExecutionRequests.forEach(toolExecutionRequests -> {
-                ToolExecutor toolExecutor = new DefaultToolExecutor(weatherTools, toolExecutionRequests);
-                String result = toolExecutor.execute(toolExecutionRequests, UUID.randomUUID().toString());
-                ToolExecutionResultMessage toolExecutionResultMessages = ToolExecutionResultMessage.from(toolExecutionRequests, result);
+            toolExecutionRequests.forEach(toolExecutionRequest -> {
+                ToolExecutor toolExecutor = new DefaultToolExecutor(weatherTools, toolExecutionRequest);
+                String result = toolExecutor.execute(toolExecutionRequest, UUID.randomUUID().toString());
+                ToolExecutionResultMessage toolExecutionResultMessages = ToolExecutionResultMessage.from(toolExecutionRequest, result);
                 chatMessages.add(toolExecutionResultMessages);
             });
         }
