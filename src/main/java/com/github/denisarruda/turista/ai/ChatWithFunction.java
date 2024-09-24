@@ -51,12 +51,13 @@ public class ChatWithFunction {
                 ToolExecutionResultMessage toolExecutionResultMessages = ToolExecutionResultMessage.from(toolExecutionRequest, result);
                 chatMessages.add(toolExecutionResultMessages);
             });
+
+            // STEP 4: Model generate final response
+            AiMessage finalResponse = chatModel.generate(chatMessages).content();
+            return finalResponse.text(); //According to the payment data, the payment status of transaction T1005 is Pending.
+        } else {
+            return aiMessage.text();
         }
-
-
-        // STEP 4: Model generate final response
-        AiMessage finalResponse = chatModel.generate(chatMessages).content();
-        return finalResponse.text(); //According to the payment data, the payment status of transaction T1005 is Pending.
 	}
 	
 	static class WeatherTools {
