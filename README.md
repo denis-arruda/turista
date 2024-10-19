@@ -17,8 +17,25 @@ This project is a **Spring Boot** application integrated with **LangChain4j**. I
 - REST APIs built with **Spring Boot** to expose LangChain capabilities.
 - Ready-to-use Maven wrapper for easy build and execution.
 
-## Configuration
-* Environment variable named "OPENAI_API_KEY" with a secret API key registered in [OpenAI Platform](https://platform.openai.com/api-keys)
+## OpenAI API Configuration
+
+This project integrates with OpenAI's API through LangChain4j. To use OpenAI's services, you must:
+
+1. **Register for an API key** at [OpenAI's website](https://platform.openai.com/signup/).
+2. Once you have your API key, you need to set it as an environment variable.
+
+### Setting the API Key
+
+For the application to connect to the OpenAI API, you must configure your environment with the following variable:
+
+- **Environment Variable Name**: `OPENAI_API_KEY`
+  
+### Example Setup
+
+On Unix/macOS:
+```bash
+export OPENAI_API_KEY=your_openai_api_key
+```
 
 ## Usage
 * Send a POST request to http://localhost:8080/post with a string in the body and the response will determine if it a praise or a complaint.
